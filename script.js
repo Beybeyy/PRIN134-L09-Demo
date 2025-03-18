@@ -8,7 +8,7 @@ function highlightIngredients() {
       }
     });
   }
-  
+
 // check function
 function checkInstructions() {
     const instructionsList = document.querySelectorAll("#recipe-instructions li");
@@ -22,16 +22,34 @@ function checkInstructions() {
   }
 
 // reset function
-  function resetInstructions() {
-   
-    const ingredientsList = document.querySelectorAll("#recipe-ingredients li");
-    ingredientsList.forEach((ingredient) => {
-        ingredient.classList.remove("highlight");
-    });
-
-    
+ function resetInstructions() {
     const instructionsList = document.querySelectorAll("#recipe-instructions li");
     instructionsList.forEach((instruction) => {
         instruction.classList.remove("is-done");
     });
+}
+
+// animation
+function ant() {
+    const element = document.getElementById("Ing");
+    element.classList.add('animate__animated', "animate__tada");
+    setTimeout(() => {
+        element.classList.remove("animate__animated", "animate__tada");
+    }, 1000);
+}
+
+function att() {
+    const element = document.getElementById("Ins");
+    element.classList.add('animate__animated', "animate__fadeIn");
+    setTimeout(() => {
+        element.classList.remove("animate__animated", "animate__fadeIn");
+    }, 3000);
+}
+
+function cakec() {
+    const element = document.getElementById("cake");
+    element.classList.add('animate__animated', "animate__flipInX");
+    setTimeout(() => {
+        element.classList.remove("animate__animated", "animate__flipInX");
+    }, 3000);
 }
